@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Self driving car</title>
+    <!-- Favicon-->
+    <link rel="icon" href="{{ url_for('static', filename='app/assets/images/favicon.ico')}}" type="image/x-icon">
+    <!-- Plugins Core Css -->
+    <link href="{{ url_for('static', filename='app/assets/css/app.min.css')}}" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="{{ url_for('static', filename='app/assets/css/style.css')}}" rel="stylesheet" />
+    <!-- Theme style. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{ url_for('static', filename = 'app/assets/css/styles/all-themes.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='app/assets/css/custom-style.css')}}" rel="stylesheet" />
+    <script src="{{ url_for('static',filename='app/assets/js/jquery.min.js') }}"></script>
+        
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+
+<body class="light">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img class="loading-img-spin" src="{{ url_for('static', filename='app/assets/images/loading.png') }}" alt="admin">
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        
+    </nav>
+    
+
+    <section class="content" style="margin-left: initial;">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="breadcrumb breadcrumb-style">
+                            <li>
+                                <h4 class="page-title">Dashboard</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infobox-5">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left card-icon">
+                                    <i class="fas fa-user-graduate col-green"></i>
+                                </div>
+                                <div class="float-right">
+                                    <p class="text-right col-green">Adi </p>
+                                    <div class="col-green">
+                                        <h3 class="text-right mb-0" id="adi"></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infobox-5">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left card-icon">
+                                    <i class="fas fa-user-graduate col-red"></i>
+                                </div>
+                                <div class="float-right">
+                                    <p class="text-right col-red">Amey</p>
+                                    <div class="col-red">
+                                        <h3 class="text-right mb-0" id="amey"></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infobox-5">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left card-icon">
+                                    <i class="fas fa-user-graduate col-blue"></i>
+                                </div>
+                                <div class="float-right">
+                                    <p class="text-right col-blue">Abhi</p>
+                                    <div class="col-blue">
+                                        <h3 class="text-right mb-0" id="abhi"></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infobox-5">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left card-icon">
+                                    <i class="fas fa-user-graduate col-orange"></i>
+                                </div>
+                                <div class="float-right">
+                                    <p class="text-right col-orange">Ani</p>
+                                    <div class="col-orange">
+                                        <h3 class="text-right mb-0" id="ani"></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row clearfix">
+                <!-- Task Info -->
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <strong>Expense Details</strong></h2>
+                        </div>
+                        <div class="body">
+                            <div class="tableBody" id="client-details">
+                                <div class="table-responsive">
+                                    <table class="table table-hover dashboard-task-infos">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Date</th>
+                                                
+                                                <th>Paid by</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="dashboard_teachers">
+                                    
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Task Info -->
+                <!-- <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Course</strong> Chart</h2>
+                        </div>
+                        <div class="body">
+                            <canvas id="chart3"></canvas>
+                            <div class="table-responsive m-t-20">
+                                <table class="table align-items-center">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>Id</th>
+                                            <th>Students</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dashboard_course">
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- <div class="row">
+
+
+
+            </div> -->
+        </div>
+    </section>
+    <!-- #Top Bar -->
+    <!-- Plugins Js -->
+    <script src="{{ url_for('static',filename='app/assets/js/app.min.js')}}"></script>
+    <!-- <script src="{{ url_for('static',filename='app/assets/js/chart.min.js')}}"></script> -->
+    <!-- <script src="{{ url_for('static',filename='app/assets/js/bundles/apexcharts/apexcharts.min.js')}}"></script> -->
+    <!-- Custom Js -->
+    <script src="{{ url_for('static',filename='app/assets/js/admin4.js')}}"></script>
+    <!-- <script src="{{ url_for('static',filename='app/assets/js/pages/index.js')}}"></script> -->
+    <script src="{{ url_for('static',filename='app/assets/js/pages/admin_index.js')}}"></script>
+</body>
+
+</html>

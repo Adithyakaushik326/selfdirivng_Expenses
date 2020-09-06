@@ -1,0 +1,39 @@
+.assign-marks{
+margin-top: 15px;
+}
+.hidden
+{
+    display:none;
+}
+.assign-marks input{
+background-color: #f5f5f5 !important;
+border-radius: 30px;
+}
+.button-column{
+display: flex;
+flex-direction: column;
+width: 80%;
+}
+
+.assign-btn{
+margin-top: auto;
+margin-bottom: 12px;
+}
+.answer-row{
+padding: 0px 15px;
+/* margin-top: 10px; */
+font-size: 1.2em;
+text-align: justify;
+}
+.question-row {
+margin-top: 10px;
+font-weight: 600;
+font-size: 1.5em;
+padding: 10px;
+}
+.question-container {
+padding: 10px;
+background-color: #c5c5c533;
+padding-left: 20px;
+margin-bottom: 25px;
+}

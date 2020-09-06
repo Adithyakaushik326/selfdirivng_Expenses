@@ -1,0 +1,266 @@
+/* Student Details display modal styles */
+
+#student-details .modal-dialog {
+    overflow-y: auto !important;
+    max-width: 85%;
+}
+
+#student-details .modal-body {
+    height: 500px;
+    overflow-y: auto;
+}
+
+#student-details .modal-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+#student-details .modal-body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+#student-details .modal-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #000000;
+    border: 2px solid #555555;
+}
+
+.main-name {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.details-header {
+    font-weight: 100;
+    font-size: 1em;
+    margin-top: 3em;
+}
+
+.details-container {
+    margin-top: 15px;
+    padding-left: 1em;
+}
+
+.details-value {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.details-container {
+    font-size: 1.1em !important;
+}
+
+.student-details-box {
+    background-color: #f4f7fa;
+    padding-bottom: 25px;
+}
+
+.badge-container {
+    background-position: center;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.course-image {
+    background-size: cover;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.course-body {
+    min-height: 120px;
+}
+
+.course {
+    margin-top: 50px;
+}
+
+.course-details {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.h4 {
+    font-size: 1.3rem;
+}
+
+.header-details-container {
+    position: relative;
+}
+
+.header-edit-icon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 2px;
+    box-shadow: none !important;
+}
+
+.header-details-container i {
+    font-size: 15px !important;
+}
+
+.course-edit-icon {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 2px;
+    box-shadow: none !important;
+}
+
+.course-delete-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 2px;
+    box-shadow: none !important;
+}
+
+.header-details-container button:hover {
+    background-color: transparent !important;
+}
+
+#change-incharge-select {
+    display: initial;
+    height: fit-content;
+    width: 60%;
+}
+
+.v-align-center {
+    display: flex;
+    align-items: center;
+}
+
+/* END student details display modal styles */
+
+/* START teacher details display modal styles */
+
+.teacher-details-container {
+    font-size: 1.1em;
+}
+
+.panel-title:hover {
+    cursor: pointer;
+}
+
+/* END teacher details display modal styles */
+.course-banner-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    
+}
+.course-name-heading{
+    position: absolute;
+    bottom: 20px;
+    margin: auto auto;
+    background-color: white;
+    padding: 5px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+/* START course display styles */
+
+.course-heading {
+    margin-top:20px;
+    min-height: 100px;
+    padding: 0px 10px;
+    font-size: 1.6em !important;
+}
+.no-box-shadow{
+    box-shadow: none !important;
+    padding: 4px;
+    font-size: 0.5em !important;
+    height: 20px;
+    margin-top: 7px !important;
+}
+.course-description-heading{
+    font-weight: 600;
+    font-size: 1.1em !important;
+}
+/* END course display styles */
+/* START editcourse styles */
+#image-display-modal
+{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative; 
+}
+/* END editcourse styles */
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {
+    /* START student details display modal styles */
+    .badge-container {
+        height: 140px;
+    }
+    .course-body {
+        padding-top: 20px;
+        min-height: 150px;
+    }
+    /* END student details display modal styles */
+}
+
+@media screen and (max-width: 768px) {
+    /* START student details display modal styles */
+    .badge-container {
+        height: 120px;
+    }
+    .h4 {
+        font-size: 1.2rem !important;
+    }
+    .course-body {
+        padding-top: 20px;
+        min-height: 150px;
+    }
+    .course-details {
+        margin-top: 10px;
+    }
+    .course-image {
+        height: 270px;
+    }
+    /* END student details display modal styles */
+    /* START teacher details display modal styles */
+    .teacher-details-container {
+        font-size: 1em;
+    }
+    /* END teacher details display modal styles */
+}
+
+@media screen and (max-width: 576px) {
+    /* START student details display modal styles */
+    #student-details .modal-dialog {
+        max-width: 100%;
+    }
+    .h4 {
+        font-size: 1rem !important;
+    }
+    .course-body {
+        padding-top: 15px;
+        min-height: 150px;
+    }
+    .course-image {
+        height: 270px;
+    }
+    /* END student details display modal styles */
+    /* START teacher details display modal styles */
+    .teacher-details-container {
+        padding: 0px !important;
+        font-size: 1em;
+    }
+    /* END teacher details display modal styles */
+    /* START course display styles */
+    .course-heading {
+        font-size: 1.3em !important;
+        min-height: 70px;
+        margin-top:15px;
+    }
+    /* END course display styles */
+}
